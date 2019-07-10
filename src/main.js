@@ -11,6 +11,7 @@ import './teampokemon.js'
 import "./weight-height-calc.js";
 import { bootUp,blinkingButtons,imgAnimation } from './animations.js';
 import "./nextpokemon.js"
+import "./evolutionpokemon.js"
 
 
 // this controls the random pokemon of the day
@@ -33,12 +34,12 @@ $(document).ready(function() {
 
   $('#name-form').submit(function(event){
     event.preventDefault()
-    console.log('form submitted');
+    // console.log('form submitted');
 
     let pokemonSearch = new Pokemon();
     let name = $('#name').val().toLowerCase();
     pokemonSearch.flavorTextLookup(name);
-    console.log(pokemonSearch)
+    // console.log(pokemonSearch)
     $('.display-screen').click(function(){
       displayImg(pokemonSearch)
       console.log('trying to display')
@@ -68,5 +69,5 @@ $(document).ready(function() {
     console.log("Type selection change");
     myPokemonList.pokemonTypeCall(`${selectedType}`);
   });
-  
+
 });

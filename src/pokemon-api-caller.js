@@ -45,9 +45,9 @@ export class Pokemon{
       this.height = pokemonCalled.height;
       this.weight = pokemonCalled.weight;
 
-
       // this is where the front end functions are called
         this.dPadSelection();
+        this.dPadEvolution();
         this.displayImg();
         this.displayStats();
         this.imgAnimation();
